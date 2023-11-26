@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" 
+   content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Test</title>
+
+</head>
+<body>
+  
+  <main>
+    <div class="image-info">
+      <div class="image">
+        <img srcset="images/image-product-desktop.jpg 600w,
+                    images/image-product-mobile.jpg 686w"
+            sizes="(max-widht: 686px) 900px,
+                    480px"
+            src="images/image-product-desktop.jpg"
+            title="Духи"
+            alt="Флакон">
+      </div>
+      <div class="info">
+        <div class = "grid-flow"
+         data-spacing="large">
+          <h2 class="type_product">
+            Perfume
+          </h2>
+          <h1 class="name_product">
+            Gabrielle Essence Eau De Parfum
+          </h1>
+
+          <p class="info_product">
+            A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+          </p>
+
+          <p class="price">
+            <span>$149.99</span>
+            $169.99
+          </p>
+        <button class="pay">
+          <div class="flex-group">
+            <svg xmlns="/image/icon-cart.svg" width="20" height="20" fill="none"></svg>
+            <h3>Add to Cart</h3>
+          </div>
+        </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
