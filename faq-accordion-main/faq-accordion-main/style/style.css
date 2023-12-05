@@ -1,0 +1,233 @@
+@font-face{
+    font-family: "WorkSans";
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400, 600, 700;
+    src: url(/faq-accordion-main/assets/fonts/WorkSans-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: "WorkSans";
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400, 600, 700;
+    src: url(/faq-accordion-main/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf) format("truetype");
+}
+
+:root{
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-pink: hsl(275, 100%, 97%);
+    --clr-grayish-purple: hsl(292, 16%, 49%);
+    --clr-dark-purple: hsl(292, 42%, 14%);
+
+    --size-paragraphs: 16px;
+
+    --font-family: "WorkSans", sans-serif;
+}
+
+@media (min-width: 500px){
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    
+        width: 30rem;
+        height: 22rem;
+    }
+}
+
+@media (max-width: 500px){
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    
+        width: 20rem;
+        height: 30rem;
+    }
+
+    .flex-box{
+        width: 250px;
+    }
+
+    .grid-box p{
+        width: 250px;
+    }
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: var(--size-paragraphs);
+    color: var(--clr-dark-purple)
+}
+
+.item_img{
+    width: 25px;
+    height: 40px;
+}
+
+.flex-box{
+    place-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.plus{
+    position: absolute;
+    left: 90%;
+    width: 31px;
+    height: 31px;
+    background: url(/faq-accordion-main/assets/images/icon-plus.svg);
+}
+
+.item_img{
+    width: 25px;
+    height: 40px;
+}
+
+.grid-box{
+    display: grid;
+    gap: 1rem;
+
+    border-color: var(--clr-light-pink);
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.grid-box p{
+    text-align: left;
+
+    font-weight: 400;
+    color: var(--clr-grayish-purple);
+}
+
+.flex-box{
+    text-align: start;
+}
+
+.flex-box h3{
+    cursor: pointer;
+    width: 430px;
+}
+
+.flex-box h3:hover{
+    color: hsl(282, 74%, 55%);
+}
+
+.background-container{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.image-container{
+    margin: 0;
+    bottom: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 35%;
+    background: url("/faq-accordion-main/assets/images/background-pattern-desktop.svg");
+    background-size: cover;
+}
+
+.color-container{
+    position: absolute;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    height:65%;
+    background-color: var(--clr-light-pink);
+}
+
+.container{
+    position: absolute;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+    padding: 1.250rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+
+    gap: 1rem;
+
+    border-radius: 1rem;
+    
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow: hidden;
+
+    background: var(--clr-white);
+    box-shadow: .5rem 1rem 3rem
+                hsl(292, 42%, 14%, .2);
+}
+
+.background-container{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.image-container{
+    margin: 0;
+    bottom: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 35%;
+    background: url("/faq-accordion-main/assets/images/background-pattern-desktop.svg");
+}
+
+.color-container{
+    position: absolute;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    height:65%;
+    background-color: var(--clr-light-pink);
+}
