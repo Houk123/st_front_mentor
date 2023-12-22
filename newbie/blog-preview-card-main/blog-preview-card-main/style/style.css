@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,600;0,800;1,600;1,800&display=swap');
+
+:root{
+    --clr-primary-yellow: hsl(47, 88%, 63%);
+
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-grey: hsl(0, 0%, 50%);
+    --clr-neutral-black: hsl(0, 0%, 7%);
+
+    --font-family: 'Figtree', sans-serif;
+    --font-weight-600: 600;
+    --font-weight-800: 800;
+    --font-size: 16px;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+*{
+    margin:0;
+    font: inherit;
+}
+
+body{
+    display:grid;
+    place-items: center;
+
+    min-height: 100vh;
+
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-600);
+    
+    background: var(--clr-primary-yellow);
+    color: var(--clr-neutral-grey)
+}
+
+.container{
+    position: absolute;
+    padding: 1.125rem;
+    gap: 2rem;
+
+    width: 350px;
+    height: 500px;
+
+    border-radius: 1rem;
+    border: 1px solid var(--clr-neutral-black);
+    background: var(--clr-neutral-white);
+}
+
+.container::after,
+.container::before{
+    content: "";
+    position: absolute;
+    background: var(--clr-neutral-black);
+
+    z-index: -1;
+}
+
+.container::before{
+    top: 12px;
+    left: 98%;
+    width: 15px;
+    height: 98%;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.container::after{
+    top: 98%;
+    left: 12px;
+    width: 99%;
+    height: 15px;
+
+    border-radius: 0 0 1rem 1rem;
+}
+
+.image{
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.info{
+    display: grid;
+    gap: .750rem;
+}
+
+.flex-box{
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    color: var(--clr-neutral-black);
+}
+
+.box{
+    display: grid;
+    place-content: center;
+    padding: .4rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    width: 25%;
+
+    font-weight: var(--clr-neutral-800);
+    font-size: 15px;
+
+    border-radius: .3rem;
+    background: var(--clr-primary-yellow);
+    color: var(--clr-neutral-black)
+}
+
+.info span{
+    font-size: 13px;
+    color: var(--clr-neutral-black);
+}
+
+.info h1{
+    font-size: 20px;
+    font-weight: var(--font-weight-800);
+    color: var(--clr-neutral-black);
+}
+
+.flex-box img{
+    width: 52px;
+}
